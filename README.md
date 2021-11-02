@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+to run:
+yarn && yarn start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?
+   In this case, I didn't build a real backend. I just utilized APIs to constantly grab the latest prices
+   for specific coins. I needed to convert the prices because the BISQ API only went from ETH to BTC so I
+   took the most recent sale of bitcoin and did some math to convert it to USD.
 
-## Available Scripts
+2. Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
+   This is a pretty basic implementation, not is truly over designed.
 
-In the project directory, you can run:
+3. If you have to scale your solution to 100 users/second traffic what changes would you make, if any?
+   For scalabilty, by using APIs it is actually fairly efficient. However, it doesn't scale well when I
+   would need to add other APIs or other coins. I would need to start mapping over the data which would probably
+   need a state management system to keep track of which site would have the best price to buy or sell the crypto.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. What are some other enhancements you would have made, if you had more time to do this implementation
+   I would probably add a tooltip feature to display the price when you hover over the bar chart. I would also flesh out a
+   real backend. I would add multiple APIs to hit. Along with some transitions. I wanted to line up my bar charts a
+   certain way as well using inline or block but it wasn't quite workig out.
